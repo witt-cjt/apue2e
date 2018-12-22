@@ -14,7 +14,14 @@ main(void)
   if ((pid = fork()) < 0)
     err(0, "fork error");
   else if (pid == 0) {
+    if ((pid = fork()) < 0)
+      err(0, "fork error");
+    if (pid > 0)
       exit(0);
+    close(STDIN_FILENO);
+    close(STDOUT_FILENO);
+    close(STDERR_FILENO);
+    sleep(100);
   } else {
     printf("child: %d\n", pid);
     sleep(10);
