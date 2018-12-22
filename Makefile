@@ -1,2 +1,2 @@
 default:
-	clang 8.6.c
+	clang 8.8.c
