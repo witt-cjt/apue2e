@@ -40,7 +40,7 @@ main(void)
     printf("fork error\n");
     exit(5);
   } else if (pid == 0) {
-    if (execlp("echoall", "echoall", "only 1 arg", (char *)0) < 0) {
+    if (execlp("a.sh", "echoall", "only 1 arg", (char *)0) < 0) {
       perror("execlp error");
       exit(6);
     }
