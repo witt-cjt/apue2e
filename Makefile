@@ -1,10 +1,8 @@
-target: a.out echoall
+target: a.out
 
 a.out:
-	clang 8.10.c
-echoall:
-	clang -o echoall 8.10.1.c
+	clang 8.2.c
 
 .PHONY : clean
 clean :
-	rm a.out echoall
+	rm a.out
