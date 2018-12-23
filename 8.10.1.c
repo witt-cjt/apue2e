@@ -18,6 +18,8 @@ main(int argc, char *argv[])
   for (i = 0; i < argc; i++)
     printf("argv[%d]: %s\n", i, argv[i]);
 
-  for (ptr = environ; *ptr != 0; ptr++)
-    printf("%s\n", *ptr);
+  // for (ptr = environ; *ptr != 0; ptr++)
+  //   printf("%s\n", *ptr);
+
+  printf("\n");
 }
