@@ -1,7 +1,7 @@
 target: a.out
 
 a.out:
-	clang 0.8.3.c
+	clang 10.9.c
 
 .PHONY : clean
 clean :
