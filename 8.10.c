@@ -20,7 +20,7 @@ main(void)
     exit(1);
   } else if (pid == 0) {
     sleep(5);
-    if (execle("/Volumes/DiDi/Projects/github/witt-cjt/apue2e/echoall", "echoall", "myarg1",
+    if (execle("/Volumes/DiDi/Projects/github/witt-cjt/apue2e/echoall", "-echoall", "myarg1",
                "MY ARG2", (char *)0, env_init) < 0) {
       perror("execle error");
       exit(2);
