@@ -15,15 +15,20 @@ main(void)
 
   signal(SIGUSR1, sig_SIGUSR1);
   sigaddset(&sigset, SIGUSR1);
-  // sigprocmask(SIG_BLOCK, &sigset, NULL);
+  sigprocmask(SIG_BLOCK, &sigset, NULL);
   printf("block signal\n");
   if (kill(getpid(), SIGUSR1) < 0) {
     perror("kill error");
     exit(1);
   }
-  printf("signal sent\n");
+  printf("signal sent 1 times\n");
+  if (kill(getpid(), SIGUSR1) < 0) {
+    perror("kill error");
+    exit(1);
+  }
+  printf("signal sent 2 times\n");
   printf("unblock signal\n");
-  // sigprocmask(SIG_UNBLOCK, &sigset, NULL);
+  sigprocmask(SIG_UNBLOCK, &sigset, NULL);
   printf("exit\n");
   exit(0);
 }
