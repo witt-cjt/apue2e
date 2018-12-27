@@ -14,6 +14,7 @@ main(void)
   sigset_t sigset;
 
   signal(SIGUSR1, sig_SIGUSR1);
+  sigemptyset(&sigset);
   sigaddset(&sigset, SIGUSR1);
   sigprocmask(SIG_BLOCK, &sigset, NULL);
   printf("block signal\n");
