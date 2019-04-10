@@ -1,0 +1,1 @@
+{"rsync":{"/home/vagrant/apue2e/":{"type":"rsync","rsync__exclude":".git/","rsync__auto":true,"guestpath":"/home/vagrant/apue2e","hostpath":"/Volumes/DiDi/Projects/github/witt-cjt/apue2e","disabled":false,"__vagrantfile":true,"exclude":".git/","auto":true,"owner":"vagrant","group":"vagrant"}}}
